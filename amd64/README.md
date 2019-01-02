@@ -10,14 +10,13 @@ This GitHub repository contains a folder for each architecture; at the moment th
 
 To start the Docker image for demo purpose, you may run:
 
-    docker run --interactive --tty --publish 3000:3000 domotz/domotzpro-agent-ARCH
+    docker run --interactive --tty --publish 3000:3000 domotz/domotzpro-agent-amd64
 
 
 To start the Docker image for production purpose, you may run:
 
-    docker run --network=host --cap-add NET_ADMIN -d domotz/domotzpro-agent-ARCH
+    docker run --network=host --cap-add NET_ADMIN -d domotz/domotzpro-agent-amd64
 
-Remember to replace ARCH with your wanted architecture (amd64, armhf, ...)
 
 ## Notes
 

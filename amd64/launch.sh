@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run --network=host --cap-add NET_ADMIN -d domotzpro-agent-amd64:latest
+docker run --network=host --cap-add NET_ADMIN -d domotz/domotzpro-agent-amd64:latest
