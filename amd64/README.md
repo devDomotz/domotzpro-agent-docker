@@ -1,23 +1,13 @@
-domotzpro-agent-docker
-======================
-
-Docker image for DomotzPro agent.
-
-
-This repository contains a folder for each architecture; at the moment the only available is amd64.
-
 ## How to run this image
 
 To start the Docker image for demo purpose, you can run:
 
-    docker run --interactive --tty --publish 3000:3000 domotz/domotzpro-agent-ARCH
+    docker run --interactive --tty --publish 3000:3000 domotz/domotzpro-agent-amd64
 
 
 To start the Docker image for production purpose, you can run:
 
-    docker run --network=host --cap-add NET_ADMIN -d domotz/domotzpro-agent-ARCH
-
-Remember to replace ARCH with your wanted architecture (amd64, armhf, ...)
+    docker run --network=host --cap-add NET_ADMIN -d domotz/domotzpro-agent-amd64
 
 ## Notes
 
