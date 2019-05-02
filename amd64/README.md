@@ -28,6 +28,8 @@ Try Domotz Pro today for free and take advantage of all we have to offer:
 * **Centralized** - Utilize one interface to manage multiple networks at multiple locations anywhere in the World.  Access all your managed devices from a single easy to use online dashboard.
 * **Secure** - Domotz has adopted the latest administrative, physical, and technical industry-standards (including encryption, firewalls, and SSL) to safeguard the security of our services and to protect the confidentiality of personally identifiable information.
 
+For more information: https://www.domotz.com
+
 ## Run and Configure
 
 On a Linux platform, start the Docker container as a background service:
