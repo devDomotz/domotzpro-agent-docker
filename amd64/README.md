@@ -3,7 +3,7 @@
 This repository provides everything you need to run a Domotz Agent in Docker.
 
 ## What is Domotz Pro?
-**Powerful IT Tools to Monitor and Manage Multiple Remote Networks**
+**Powerful IT Tool to Monitor and Manage Multiple Remote Networks**
 
 Domotz Pro is the premier Remote Monitoring and Management platform for the IoT World. Domots offers powerful network management software for MSPs, Integrators, Security Professionals, and Business Owners. Domotz Pro is the complete solution to cost-effectively manage and monitor your customers' networks with plug and play setup, a friendly UX, and a comprehensive feature set, accessible from any desktop browser, mobile device or through easy to use RESTful API.
 
