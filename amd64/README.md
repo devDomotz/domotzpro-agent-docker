@@ -40,7 +40,17 @@ Once the Domotz Agent has been started in the Docker Container connect to the ho
 
 (assuming 172.16.10.155 the IP of the Host)
 
+For Mac and Windows platforms see the notes.
+
 ### Notes
+
+Given that the configuration of the Domotz Agent is written on a file on the local storage, we recommend mounting the following folder as an external volume (on the host server):
+
+    /opt/domotz/etc
+
+In this way, even if you destroy the environment and rebuild the container, keeping the configuration files in the host will ensure that the Domotz Agent restarts with the same configuration.
+
+Alternatively, you can force the Docker Container to start always with the same MAC address (e.g. "docker run ...  --mac-address 02:42:AC:12:00:03 ..."). In this way, when the Domotz Agent restart, and you will be required to re-configure it with your account, you will not been asked to create a new entity, but you will be allowed to RESUME the configuration from the previous Domotz Agent.
 
 On Mac and Windows platforms the container is not able to discover devices and monitor them on the hosting network. However, you can monitor the Docker Daemon network and the other containers running on that.
 
