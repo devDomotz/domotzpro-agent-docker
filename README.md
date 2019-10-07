@@ -16,7 +16,7 @@ Remember to replace ARCH with your wanted architecture (amd64, armhf, ...)
 
 ## Notes
 
-On Mac and Windows platforms the container is not able to see the real network host. You can only monitor the network where docker containers are running.
+On Mac and Windows platforms the container is not able to see the real network host. You can only monitor the network where docker containers are running on.
 
 To launch the container you can type:
 
