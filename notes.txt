@@ -1,2 +1,4 @@
 2019-02-14: refreshing project for agent 2.4.3-b001
+2019-10-22: DPLATFORM=docker
+2019-11-06: refreshing project for agent 2.7.5-b004
 
