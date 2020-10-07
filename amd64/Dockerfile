@@ -18,6 +18,9 @@ RUN printf "#!/bin/sh\necho N 2" > /sbin/runlevel \
 
 RUN sed -i 's/raspberry/docker/g' /opt/domotz/etc/domotz.env
 
+RUN sed -i 's/mod_fs.renameSync(stablePawnFolder, oldPawnFolder);/mod_child_process.spawnSync("cp", ["-R", stablePawnFolder, oldPawnFolder], spawnOptions); mod_child_process.spawnSync("rm", ["-rf", stablePawnFolder], spawnOptions);/g' /opt/domotz/bin/domotz_updater
+RUN sed -i 's/mod_fs.renameSync(tmpPawnFolder, stablePawnFolder);/mod_child_process.spawnSync("cp", ["-R", tmpPawnFolder, stablePawnFolder], spawnOptions); mod_child_process.spawnSync("rm", ["-rf", tmpPawnFolder], spawnOptions);/g' /opt/domotz/bin/domotz_updater
+
 RUN mkdir /opt/utils
 COPY runme.sh /opt/utils
 
