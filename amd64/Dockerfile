@@ -6,7 +6,7 @@ EXPOSE 3000
 
 ADD https://portal.domotz.com/download/agent_packages/domotz-debian-x64-1.0.deb /root/
 
-RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates iputils-ping net-tools
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates iputils-ping net-tools iproute2
 
 RUN printf "#!/bin/sh\necho N 2" > /sbin/runlevel \
  && chmod +x /sbin/runlevel \
@@ -17,9 +17,6 @@ RUN printf "#!/bin/sh\necho N 2" > /sbin/runlevel \
  && rm -rf /var/lib/apt/lists/*
 
 RUN sed -i 's/raspberry/docker/g' /opt/domotz/etc/domotz.env
-
-RUN sed -i 's/mod_fs.renameSync(stablePawnFolder, oldPawnFolder);/mod_child_process.spawnSync("cp", ["-R", stablePawnFolder, oldPawnFolder], spawnOptions); mod_child_process.spawnSync("rm", ["-rf", stablePawnFolder], spawnOptions);/g' /opt/domotz/bin/domotz_updater
-RUN sed -i 's/mod_fs.renameSync(tmpPawnFolder, stablePawnFolder);/mod_child_process.spawnSync("cp", ["-R", tmpPawnFolder, stablePawnFolder], spawnOptions); mod_child_process.spawnSync("rm", ["-rf", tmpPawnFolder], spawnOptions);/g' /opt/domotz/bin/domotz_updater
 
 RUN mkdir /opt/utils
 COPY runme.sh /opt/utils
