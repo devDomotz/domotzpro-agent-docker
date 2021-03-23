@@ -6,7 +6,7 @@ EXPOSE 3000
 
 ADD https://portal.domotz.com/download/agent_packages/domotz-debian-x64-1.0.deb /root/
 
-RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates iputils-ping net-tools iproute2 openssh-client
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates iputils-ping net-tools iproute2 ssh
 
 RUN printf "#!/bin/sh\necho N 2" > /sbin/runlevel \
  && chmod +x /sbin/runlevel \
