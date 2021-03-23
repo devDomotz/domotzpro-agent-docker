@@ -53,6 +53,7 @@ Given that the configuration of the Domotz Agent is written on a file on the loc
 In this way, even if you destroy the environment and rebuild the container, keeping the configuration files in the host will ensure that the Domotz Agent restarts with the same configuration.
 
 Alternatively, you can force the Docker Container to start always with the same MAC address (e.g. "docker run ...  --mac-address 02:42:AC:12:00:03 ..."). In this way, when the Domotz Agent restart, and you will be required to re-configure it with your account, you will not been asked to create a new entity, but you will be allowed to RESUME the configuration from the previous Domotz Agent.
+> setting the mac-address is not compatible with --network=host. using host networking uses the mac address of the host so destroying and re-creating a container on the same host should link properly.
 
 On Mac and Windows platforms the container is not able to discover devices and monitor them on the hosting network. However, you can monitor the Docker Daemon network and the other containers running on that.
 
