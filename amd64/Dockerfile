@@ -17,6 +17,7 @@ RUN printf "#!/bin/sh\necho N 2" > /sbin/runlevel \
  && rm -rf /var/lib/apt/lists/*
 
 RUN sed -i 's/raspberry/docker/g' /opt/domotz/etc/domotz.env
+RUN sed -i 's/debian/docker/g' /opt/domotz/etc/domotz.env
 
 RUN mkdir /opt/utils
 COPY runme.sh /opt/utils
